@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wildguard Alliance protects wildlife from poaching, illegal hunting, trafficking and habitat destruction. Support rescue, care and conservation.">
+  <title>Wildguard Alliance | Protect Wildlife. Save Lives.</title>
+  <style>
+    :root {
+      --forest: #123b2c;
+      --green: #1f6847;
+      --lime: #b9d88a;
+      --cream: #f6f5ee;
+      --ink: #1c2922;
+      --muted: #65736a;
+      --white: #fff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--ink); line-height: 1.6; background: var(--cream); }
+    a { color: inherit; }
+    .topbar { background: var(--forest); color: #eaf2e8; padding: 9px 6%; text-align: center; font-size: 13px; letter-spacing: .04em; }
+    header { background: rgba(255,255,255,.97); position: sticky; top: 0; z-index: 10; box-shadow: 0 2px 16px #102b1a12; }
+    .nav { max-width: 1160px; margin: auto; padding: 15px 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 11px; text-decoration: none; font-weight: 800; color: var(--forest); font-size: 19px; letter-spacing: -.03em; }
+    .brand-mark { width: 40px; height: 40px; border-radius: 13px 13px 13px 4px; display: grid; place-items: center; background: var(--green); color: white; font-size: 23px; }
+    .links { display: flex; gap: 26px; align-items: center; font-size: 14px; font-weight: 700; }
+    .links a { text-decoration: none; }
+    .links a:hover { color: var(--green); }
+    .btn { display: inline-block; text-decoration: none; border: 0; border-radius: 999px; padding: 13px 23px; background: var(--lime); color: #193321; font-weight: 800; cursor: pointer; }
+    .btn:hover { filter: brightness(.96); transform: translateY(-1px); }
+    .hero { min-height: 590px; display: flex; align-items: center; color: white; background: linear-gradient(90deg, rgba(7,31,22,.88), rgba(7,31,22,.52) 56%, rgba(7,31,22,.12)), url('https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=2000&q=85') center 45%/cover; }
+    .hero-inner { max-width: 1160px; width: 100%; margin: auto; padding: 85px 24px; }
+    .eyebrow { color: var(--lime); text-transform: uppercase; letter-spacing: .17em; font-size: 12px; font-weight: 800; }
+    h1 { max-width: 700px; font-size: clamp(42px, 6vw, 70px); line-height: 1.03; letter-spacing: -.045em; margin: 18px 0; }
+    .hero p { max-width: 570px; font-size: 18px; color: #edf2eb; margin: 0 0 30px; }
+    .hero-actions { display: flex; gap: 13px; flex-wrap: wrap; align-items: center; }
+    .btn-outline { display: inline-block; text-decoration: none; border: 1px solid #ffffffa8; color: white; padding: 12px 22px; border-radius: 999px; font-weight: 700; }
+    section { padding: 82px 24px; }
+    .wrap { max-width: 1100px; margin: auto; }
+    .section-kicker { color: var(--green); text-transform: uppercase; letter-spacing: .15em; font-size: 12px; font-weight: 800; }
+    h2 { font-size: clamp(30px, 4vw, 44px); line-height: 1.12; letter-spacing: -.035em; margin: 12px 0 18px; color: var(--forest); }
+    .intro { max-width: 680px; color: var(--muted); font-size: 17px; }
+    .mission-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; }
+    .mission-card { background: white; border-radius: 18px; padding: 26px; box-shadow: 0 8px 30px #173b2410; }
+    .mission-icon { font-size: 28px; width: 54px; height: 54px; display: grid; place-items: center; background: #edf4e7; border-radius: 16px; }
+    .mission-card h3 { color: var(--forest); margin: 18px 0 8px; font-size: 19px; }
+    .mission-card p { color: var(--muted); margin: 0; font-size: 15px; }
+    .donate { background: var(--forest); color: white; }
+    .donate h2 { color: white; }
+    .donate .section-kicker { color: var(--lime); }
+    .donate-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 55px; align-items: center; }
+    .donate-copy p { color: #d7e4d9; font-size: 17px; }
+    .donate-panel { background: white; color: var(--ink); border-radius: 20px; padding: 30px; text-align: center; box-shadow: 0 20px 55px #0003; }
+    .donate-panel h3 { color: var(--forest); font-size: 24px; margin: 0 0 8px; }
+    .donate-panel p { color: var(--muted); font-size: 14px; margin: 0 0 22px; }
+    .paypal-form { display: flex; justify-content: center; }
+    .paypal-form input[type="image"] { width: 190px; height: auto; cursor: pointer; }
+    .secure-note { margin-top: 17px; color: #718077; font-size: 12px; }
+    .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 32px; }
+    .step { border-top: 3px solid var(--lime); padding-top: 17px; }
+    .step strong { color: var(--green); font-size: 13px; letter-spacing: .1em; }
+    .step h3 { color: var(--forest); margin: 7px 0; }
+    .step p { color: var(--muted); margin: 0; font-size: 15px; }
+    .closing { background: #e8eee2; text-align: center; }
+    .closing .intro { margin: 0 auto 25px; }
+    footer { background: #0c2b20; color: #d5e2d8; padding: 32px 24px; }
+    .footer-inner { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; font-size: 13px; }
+    footer strong { color: white; }
+    @media (max-width: 760px) {
+      .links a:not(.btn) { display: none; }
+      .hero { min-height: 560px; background-position: 58% center; }
+      .mission-grid, .how-grid, .donate-grid { grid-template-columns: 1fr; }
+      .donate-grid { gap: 30px; }
+      section { padding: 65px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">WILDLIFE HAS A RIGHT TO LIVE FREE.</div>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#home"><span class="brand-mark">✦</span><span>WILDGUARD ALLIANCE</span></a>
+      <div class="links">
+        <a href="#mission">Our mission</a>
+        <a href="#impact">How we help</a>
+        <a class="btn" href="#donate">Donate now</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div class="eyebrow">Protect wildlife. Preserve our future.</div>
+        <h1>Every wild life deserves a chance.</h1>
+        <p>We stand against poaching, illegal hunting, wildlife trafficking and cruelty. Your donation helps support rescue, protection and a safer future for animals in the wild.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#donate">Make a donation</a>
+          <a class="btn-outline" href="#mission">Discover our mission</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="mission">
+      <div class="wrap">
+        <div class="section-kicker">Why we exist</div>
+        <h2>Wildlife needs protection.<br>We can make a difference together.</h2>
+        <p class="intro">Wild animals are threatened every day by poachers, illegal hunters, traffickers and the destruction of their natural homes. Wildguard Alliance is committed to standing up for wildlife and supporting efforts that give animals a chance to survive.</p>
+        <div class="mission-grid">
+          <article class="mission-card"><div class="mission-icon">🛡️</div><h3>Stop wildlife crime</h3><p>Support efforts to prevent poaching, illegal hunting and the cruel trade in wild animals.</p></article>
+          <article class="mission-card"><div class="mission-icon">🐾</div><h3>Rescue and care</h3><p>Help support rescue responses, veterinary attention, rehabilitation and safe care for animals in need.</p></article>
+          <article class="mission-card"><div class="mission-icon">🌿</div><h3>Protect the wild</h3><p>Promote awareness and conservation so wildlife and their habitats can thrive for generations.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="donate" id="donate">
+      <div class="wrap donate-grid">
+        <div class="donate-copy">
+          <div class="section-kicker">Be part of the mission</div>
+          <h2>Your kindness can help save a life.</h2>
+          <p>Every contribution helps strengthen wildlife protection. Your donation can support rescue and care, essential supplies, veterinary treatment and conservation work.</p>
+          <p>Whether you give a little or a lot, you are helping give wildlife a voice. Thank you for standing with us.</p>
+        </div>
+        <div class="donate-panel">
+          <h3>Support Wildguard Alliance</h3>
+          <p>Donate securely through PayPal using the button below.</p>
+          <div class="paypal-form">
+            <a class="btn" href="https://www.paypal.com/donate/?campaign_id=TSKDAKWYK6WLC" target="_blank" rel="noopener noreferrer" aria-label="Donate to Wildguard Alliance with PayPal">Donate with PayPal</a>
+          </div>
+          <div class="secure-note">You will complete your donation on PayPal.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="impact">
+      <div class="wrap">
+        <div class="section-kicker">Your support in action</div>
+        <h2>How your donation can help</h2>
+        <p class="intro">Donations help make the work possible. Depending on urgent needs and available resources, support may go toward:</p>
+        <div class="how-grid">
+          <div class="step"><strong>01 / RESPOND</strong><h3>Rescue and emergency help</h3><p>Support urgent responses for animals affected by wildlife crime, injury or abandonment.</p></div>
+          <div class="step"><strong>02 / RESTORE</strong><h3>Treatment and rehabilitation</h3><p>Help provide food, veterinary care, recovery support and safe shelter where needed.</p></div>
+          <div class="step"><strong>03 / PREVENT</strong><h3>Awareness and protection</h3><p>Help raise awareness about wildlife trafficking, poaching and the importance of conservation.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap">
+        <div class="section-kicker">Together for wildlife</div>
+        <h2>Be the reason hope survives.</h2>
+        <p class="intro">Wildlife cannot ask us for help. We can choose to speak up, take action and protect the animals who share our planet.</p>
+        <a class="btn" href="#donate">Donate to the mission</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div><strong>WILDGUARD ALLIANCE</strong><br>Protecting wildlife. Defending the wild.</div>
+      <div>© <span id="year">2026</span> Wildguard Alliance. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>
